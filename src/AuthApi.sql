@@ -7,11 +7,12 @@ CREATE TABLE `now_auth_group` (
 ) COMMENT='用户组表' COLLATE='utf8mb4_general_ci' ENGINE=InnoDB AUTO_INCREMENT=0;
 
 CREATE TABLE `now_auth_group_access` (
-	`uid` BIGINT(16) NOT NULL COMMENT '用户id',
+	`user_id` BIGINT(16) NOT NULL COMMENT '用户id',
 	`group_id` INT(10) NOT NULL COMMENT '用户组id',
-	UNIQUE INDEX `uid` (`uid`),
+	UNIQUE INDEX `uid` (`user_id`),
 	UNIQUE INDEX `group_id` (`group_id`)
 ) COLLATE='utf8mb4_general_ci' ENGINE=InnoDB;
+
 
 CREATE TABLE `now_auth_rule` (
 	`id` INT(10) NOT NULL AUTO_INCREMENT COMMENT 'AUTH规则表',
