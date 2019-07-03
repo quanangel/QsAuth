@@ -102,10 +102,10 @@ Class AuthApi{
         $authList = [];
         foreach ($rules as $rule) {
             //只要存在就记录
-            $authList[] = [strtolower($rule['name']),strtolower($rule['method'])];
+            $authList[] = ['name'=>strtolower($rule['name']), 'method'=>strtolower($rule['method'])];
         }
 
-        return array_unique($authList);
+        return ($authList);
     }
 
 }
