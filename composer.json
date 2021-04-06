@@ -12,7 +12,7 @@
             "email": "quanangel@outlook.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Qs\\auth\\": "src/"
