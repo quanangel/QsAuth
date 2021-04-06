@@ -2,6 +2,7 @@
     "name": "nowqs/auth",
     "description": "it's auth class",
     "type": "library",
+    "version":"v1.0.0",
     "require": {
         "php": ">=5.4"
     },
