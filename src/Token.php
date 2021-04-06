@@ -13,7 +13,7 @@ namespace Qs\Auth;
 
 class Token {
     // encryption key, if value change the token needs cheanged
-    protected string $_encryptionKey = 'Tx32133asaJYNGBUQOORAJYL';
+    protected static string $_encryptionKey = 'Tx32133asaJYNGBUQOORAJYL';
 
     public function __construct(array $options = []) {
         if (!empty($options)) {
@@ -31,8 +31,8 @@ class Token {
      * @param  string $userId
      * @return string
      */
-    public function build(?string $userId): string {
-        $token = $this->_encryptionKey . (string)microtime(true) . rand(0, 99999);
+    public static function build(?string $userId): string {
+        $token = self::$_encryptionKey . (string)microtime(true) . rand(0, 99999);
         if (null == $userId) {
             $token = md5($token);
         } else {
@@ -50,7 +50,7 @@ class Token {
      * @param  string     $token
      * @return null|array
      */
-    public function analysis(string $token): ?array {
+    public static function analysis(string $token): ?array {
         $base64 = base64_decode($token);
         $tmp = explode('_', $base64);
         if (count($tmp) != 2) {
