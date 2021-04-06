@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Author: Qs
  * Name:   the is AUTH Token class
  * Note:
- * TIme:   2021/04/02 15:49
+ * Time:   2021/04/02 15:49
  */
 
 namespace Qs\Auth;
@@ -27,7 +27,7 @@ class Token {
      * Author: william
      * Name:   the build the token
      * Note:
-     * TIme:   2021/04/02 15:49
+     * Time:   2021/04/02 15:49
      * @param  string $userId
      * @return string
      */
@@ -46,7 +46,7 @@ class Token {
      * Author: william
      * Name:   analysis token and return token、user_id
      * Note:
-     * TIme:   2021/04/06 10:38
+     * Time:   2021/04/06 10:38
      * @param  string     $token
      * @return null|array
      */
