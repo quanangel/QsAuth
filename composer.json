@@ -3,7 +3,7 @@
     "description": "it's auth class",
     "type": "library",
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.1"
     },
     "license": "apache-2.0",
     "authors": [
