@@ -44,6 +44,27 @@ class Token {
 
     /**
      * Author: william
+     * Name:   the build the token by password
+     * Note:
+     * Time:   2021/04/07 09:56
+     * @param  string $password
+     * @return string
+     */
+    public static function build_by_password(string $password): string {
+        $length = strlen($password);
+        if ($length <= 1) {
+            $token = $password . self::$_encryptionKey;
+        } else {
+            $halfLength = (int)($length / 2);
+            $token = substr($password, 0, $halfLength) . self::$_encryptionKey . substr($password, $halfLength, -1);
+        }
+        $token = md5($token);
+
+        return $token;
+    }
+
+    /**
+     * Author: william
      * Name:   analysis token and return token、user_id
      * Note:
      * Time:   2021/04/06 10:38
