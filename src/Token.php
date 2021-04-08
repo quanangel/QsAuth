@@ -15,12 +15,16 @@ class Token {
     // encryption key, if value change the token needs cheanged
     protected static string $_encryptionKey = 'Tx32133asaJYNGBUQOORAJYL';
 
-    public function __construct(array $options = []) {
+    public static function initialize(array $options = []) {
         if (!empty($options)) {
             if (isset($options['encryption_key'])) {
                 self::$_encryptionKey = $options['encryption_key'];
             }
         }
+    }
+
+    public static function get_key() {
+        return self::$_encryptionKey;
     }
 
     /**
