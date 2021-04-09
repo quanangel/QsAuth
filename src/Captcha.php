@@ -137,7 +137,7 @@ class Captcha {
             }
         } else {
             for ($i = 0; $i < self::$_config['length']; $i++) {
-                $code[i] = self::$_config['code_set'][mt_rand(0, strlen(self::$_config['code_set']) - 1)];
+                $code[$i] = self::$_config['code_set'][mt_rand(0, strlen(self::$_config['code_set']) - 1)];
                 $codeNX += mt_rand((int)(self::$_config['font_size'] * 1.2), (int)(self::$_config['font_size'] * 1.6));
                 imagettftext($im, (int)self::$_config['font_size'], mt_rand(-40, 40), $codeNX, (int)(self::$_config['font_size'] * 1.6), (int)$fontColor, $fontttf, $code[$i]);
             }
