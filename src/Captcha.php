@@ -172,7 +172,7 @@ class Captcha {
      * @param integer $width
      * @param integer $height
      */
-    private static function background(mixed $im, int $width, int $height) {
+    private static function background($im, int $width, int $height) {
         $path = __DIR__ . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'bgs' . DIRECTORY_SEPARATOR;
         $dir = dir($path);
 
@@ -201,7 +201,7 @@ class Captcha {
      * @param integer $width
      * @param integer $height
      */
-    private static function writeNoise(mixed $im, int $width, int $height) {
+    private static function writeNoise($im, int $width, int $height) {
         $codeSet = '2345678abcdefhijkmnpqrstuvwxyz';
         for ($i = 0; $i < 10; $i++) {
             // noise color
@@ -232,7 +232,7 @@ class Captcha {
      *                          ω：决定周期（最小正周期T=2π/∣ω∣）
      *
      */
-    private static function writeCurve(mixed $im, int $width, int $height, int $fontSize, mixed $color) {
+    private static function writeCurve($im, int $width, int $height, int $fontSize, mixed $color) {
         $px = $py = 0;
 
         // 曲线前部分
