@@ -232,7 +232,7 @@ class Captcha {
      *                          ω：决定周期（最小正周期T=2π/∣ω∣）
      *
      */
-    private static function writeCurve($im, int $width, int $height, int $fontSize, mixed $color) {
+    private static function writeCurve($im, int $width, int $height, int $fontSize, $color) {
         $px = $py = 0;
 
         // 曲线前部分
