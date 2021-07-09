@@ -148,7 +148,7 @@ class Captcha {
             $code = implode('', $code);
         }
         // get micro time string
-        $microTime = str_ireplace('.', '', microtime(true));
+        $microTime = str_ireplace('.', '', (string)microtime(true));
         // encrypt code
         $codeKey = self::encrypt_code($code, $microTime);
 
